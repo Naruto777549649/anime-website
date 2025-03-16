@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Anime List</h1>
+    <a href="/add">Add New Anime</a>
+    <div class="anime-container">
+        {% for anime in animes %}
+            <div class="anime-card">
+                <img src="{{ anime.image_url }}" alt="{{ anime.name }}">
+                <h2>{{ anime.name }}</h2>
+                <p>{{ anime.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
