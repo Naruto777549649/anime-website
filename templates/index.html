@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime List</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>AnimeStream - Watch Anime Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Anime List</h1>
-    <a href="/add">Add New Anime</a>
-    <div class="anime-container">
-        {% for anime in animes %}
+
+    <header>
+        <h1>AnimeStream</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Latest Episodes</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Watch Unlimited Anime for Free!</h2>
+        <button>Start Watching</button>
+    </section>
+
+    <section class="anime-list">
+        <h2>Trending Anime</h2>
+        <div class="anime-container">
             <div class="anime-card">
-                <img src="{{ anime.image_url }}" alt="{{ anime.name }}">
-                <h2>{{ anime.name }}</h2>
-                <p>{{ anime.description }}</p>
+                <img src="https://via.placeholder.com/150" alt="Anime">
+                <h3>Naruto Shippuden</h3>
             </div>
-        {% endfor %}
-    </div>
+            <div class="anime-card">
+                <img src="https://via.placeholder.com/150" alt="Anime">
+                <h3>Demon Slayer</h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://via.placeholder.com/150" alt="Anime">
+                <h3>Attack on Titan</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AnimeStream. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
