@@ -7,29 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Navbar -->
     <header>
-        <h1>🔥 Anime World 🚀</h1>
-        <input type="text" id="searchBox" placeholder="Search Anime...">
+        <h1>Anime World</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Anime List</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="anime-list">
-        <div class="anime">
-            <img src="https://placehold.co/200x300" alt="Anime Thumbnail">
-            <h2>Naruto Shippuden</h2>
-            <button onclick="watchAnime('https://yourvideolink.com')">Watch Now</button>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to the Anime Universe!</h2>
+        <p>Explore the best anime series and characters.</p>
+    </section>
 
-        <div class="anime">
-            <img src="https://placehold.co/200x300" alt="Anime Thumbnail">
-            <h2>Demon Slayer</h2>
-            <button onclick="watchAnime('https://yourvideolink.com')">Watch Now</button>
+    <!-- Anime List -->
+    <section class="anime-list">
+        <h2>Top Anime</h2>
+        <div class="anime-grid">
+            <div class="anime-card">
+                <img src="assets/naruto.jpg" alt="Naruto">
+                <p>Naruto Uzumaki</p>
+            </div>
+            <div class="anime-card">
+                <img src="assets/goku.jpg" alt="Goku">
+                <p>Goku</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function watchAnime(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
